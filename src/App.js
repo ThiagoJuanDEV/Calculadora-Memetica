@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Calculator from "./components/Calculator";
+import { useState } from "react";
 
 function App() {
+  const [inputNumber, setInputNumber] = useState("0");
+  const [operator, setOperator] = useState(null);
+  const [previousNumber, setPreviousNumber] = useState(null);
+  const [nextNumber, setNextNumber] = useState(null);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Calculator
+      inputNumber={inputNumber}
+      setInputNumber={setInputNumber}
+      operator={operator}
+      setOperator={setOperator}
+      previousNumber={previousNumber}
+      setPreviousNumber={setPreviousNumber}
+      nextNumber={nextNumber}
+      setNextNumber={setNextNumber}
+    />
   );
 }
 
