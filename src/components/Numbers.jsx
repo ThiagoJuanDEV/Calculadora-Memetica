@@ -10,7 +10,9 @@ const Numbers = ({ inputNumber, setInputNumber }) => {
         key={index}
         onClick={() =>
           setInputNumber(
-            inputNumber === "0" ? number.toString() : inputNumber.concat(number)
+            inputNumber === "0"
+              ? number.toString()
+              : inputNumber.concat(number.toString())
           )
         }
       >

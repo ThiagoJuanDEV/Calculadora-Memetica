@@ -1,13 +1,13 @@
 const Operators = ({ operator, setOperator, inputNumber, setInputNumber }) => {
-  const operators = ["+", "-", "/", "x"];
+  const operators = ["+", "-", "/", "*"];
 
   const operatorActive = (op) => {
-    if (inputNumber.search(operator) || operator !== null) {
+    if  (operator === null) {
       setOperator(op);
       setInputNumber(`${inputNumber} ${op} `);
+    } else {
       return;
     }
-    console.log("Você não pode fazer várias operações num lugar só!");
   };
 
   return (

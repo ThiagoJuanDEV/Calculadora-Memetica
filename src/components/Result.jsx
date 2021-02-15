@@ -1,29 +1,64 @@
 const Result = ({ inputNumber, setInputNumber, operator, setOperator }) => {
-  const getResult = () => {
-    if (operator === "+") {
-      let toResult = inputNumber.split(" ");
-      let changed = toResult.filter((e) => {
-        return e !== "+";
-      });
+  const variableManagment = () => {
+    let splitArray = inputNumber.split(" ");
 
-      console.log(changed);
+    let numbersToOperate = splitArray.filter((e) => {
+      return e !== operator;
+    });
 
-      let another = changed.map((e) => {
-        return parseInt(e);
-      });
-      console.log(another);
-
-      let c = 0;
-      for (let number in another) {
-        c += another[number];
-      }
-
-      setInputNumber(c);
-      setOperator(null);
-    }
+    return numbersToOperate.map((number) => {
+      return parseInt(number);
+    });
   };
+  /* Por enquanto não acontece, mas a minha ideia é fazer várias operações numa parte só! */
+  const getResult = () => {
+    if(inputNumber === '0') {
+      return;
+    }
+    else if(operator === '+') {
+      let operate = variableManagment();
+      
+      let result = 0;
+      let number;
 
-  return <button onClick={() => getResult()}>=</button>;
+      for(number in operate) { // Aqui tem um escopo de como podemos fazer!
+        result += operate[number]
+      };
+
+      setOperator(null);
+      setInputNumber(result.toString())
+    }
+    else if(operator === '-') {
+      let operate = variableManagment();
+
+      setOperator(null);
+
+      setInputNumber((operate[0] - operate[1]).toString())
+    }
+    else if(operator === '*') {
+      let operate = variableManagment();
+
+      let result = 1;
+      let number;
+      
+      for(number in operate) {
+        result *= operate[number]
+      };
+
+      setOperator(null);
+
+      setInputNumber(result.toString())
+    }
+    else {
+      let operate = variableManagment();
+
+      setOperator(null);
+
+      setInputNumber((operate[0] / operate[1]).toString())
+    }
+
+  };
+  return <button onClick={() =>  getResult()}>=</button>;
 };
 
 export default Result;
