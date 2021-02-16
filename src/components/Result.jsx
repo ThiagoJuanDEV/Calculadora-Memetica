@@ -54,7 +54,7 @@ const Result = ({ inputNumber, setInputNumber, operator, setOperator }) => {
 
       setOperator(null);
 
-      setInputNumber((operate[0] / operate[1]).toString())
+      setInputNumber((operate[0] / operate[1]).toString());
     }
 
   };

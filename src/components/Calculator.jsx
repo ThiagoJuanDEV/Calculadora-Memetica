@@ -36,6 +36,7 @@ const Calculator = ({
       />
       <Input
         inputNumber={inputNumber}
+        setInputNumber={setInputNumber}
         operator={operator}
         previousNumber={previousNumber}
       />
