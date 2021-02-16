@@ -1,13 +1,9 @@
-const Operators = ({ operator, setOperator, inputNumber, setInputNumber }) => {
+const Operators = ({ setOperator, inputNumber, setInputNumber }) => {
   const operators = ["+", "-", "/", "*"];
 
   const operatorActive = (op) => {
-    if  (operator === null) {
-      setOperator(op);
-      setInputNumber(`${inputNumber} ${op} `);
-    } else {
-      return;
-    }
+    setOperator(op);
+    setInputNumber(`${inputNumber} ${op} `);
   };
 
   return (

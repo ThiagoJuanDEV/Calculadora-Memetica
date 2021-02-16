@@ -1,24 +1,16 @@
 import Numbers from "./Numbers";
 import Operators from "./Operators";
 import Input from "./Input";
-import Result from "./Result";
 
 const Calculator = ({
   inputNumber,
   setInputNumber,
   operator,
   setOperator,
-  previousNumber,
-  setPreviousNumber,
-  nextNumber,
-  setNextNumber,
 }) => {
-  const cleanupInput = () => {
-    setInputNumber("0");
-  };
-
   return (
     <div>
+      <input type="range" value="0" onChange={() => ''} /> // Colocar propriedade OnCLick
       <Numbers inputNumber={inputNumber} setInputNumber={setInputNumber} />
       <Operators
         operator={operator}
@@ -26,19 +18,11 @@ const Calculator = ({
         inputNumber={inputNumber}
         setInputNumber={setInputNumber}
       />
-      <Result
-        operator={operator}
-        setOperator={setOperator}
-        inputNumber={inputNumber}
-        previousNumber={previousNumber}
-        setInputNumber={setInputNumber}
-        setPreviousNumber={setPreviousNumber}
-      />
       <Input
         inputNumber={inputNumber}
         setInputNumber={setInputNumber}
         operator={operator}
-        previousNumber={previousNumber}
+        setOperator={setOperator}
       />
     </div>
   );
