@@ -1,0 +1,180 @@
+@media(max-width: 450px) {
+  .calculator {
+    width: 77vw;
+    padding: 5vw;
+  }
+
+  h4 {
+    font-size: 3.75vw;
+  }
+
+  .eval-input {
+    height: 12.5%;
+    border-radius: 3vh;
+    font-size: 8vw;
+    padding-right: 3vw;
+  }
+
+  .button {
+    height: 8vh;
+    font-size: 5.5vw;
+    width: 16vw;
+    border-radius: 2.25vh;
+  }
+
+  .m-55 {
+    margin: 1vh 0.6vh;
+  }
+
+  /* Mode */
+
+  .mode-container {
+    margin-top: 2.5vh;
+    width: 14.5vw;
+    height: 3.5vh;
+
+  }
+  
+  .mode-container i {
+    font-size: 5vw;
+  }
+
+  .fa-sun {
+    right: 65%;
+    top: 20%;
+  }
+
+  .fa-moon {
+    left: 65%;
+    top: 20%;
+  }
+  
+  .mode::-moz-range-thumb {
+    height: 3.5vh;
+    width: 3.5vh;
+  }
+
+  .mode::-webkit-slider-thumb {
+    height: 3.5vh;
+    width: 3.5vh;
+  }
+}
+
+@media(min-width: 450px) and (max-width: 1024px) {
+  .calculator {
+    width: 70vw;
+    padding: 5vw;
+  }
+
+  h4 {
+    font-size: 3.45vw;
+  }
+
+  .eval-input {
+    height: 12.5%;
+    border-radius: 3vh;
+    font-size: 6vw;
+    padding-right: 3vw;
+    margin-bottom: 2vh;
+  }
+
+  .button {
+    height: 8vh;
+    font-size: 5vw;
+    width: 13vw;
+    border-radius: 2.25vh;
+  }
+
+  .m-55 {
+    margin: 1.2vh 1.2vw;
+  }
+
+  /* Mode */
+
+  .mode-container {
+    margin-top: 2.5vh;
+    width: 14.5vw;
+    height: 4.5vh;
+  }
+  
+  .mode-container i {
+    font-size: 5vw;
+  }
+
+  .fa-sun {
+    right: 70%;
+    top: 16%;
+  }
+
+  .fa-moon {
+    left: 70%;
+    top: 16%;
+  }
+  
+  .mode::-moz-range-thumb {
+    height: 4.5vh;
+    width: 4.5vh;
+  }
+
+  .mode::-webkit-slider-thumb {
+    height: 4.5vh;
+    width: 4.5vh;
+  }
+}
+
+@media(min-width: 1025px) and (min-height: 900px){
+  .calculator {
+    width: 24.5vw;
+    padding: 2.5vw;
+  }
+
+  h4 {
+    font-size: 1.5vw;
+  }
+
+  .mode-container  {
+    width: 4.5vw;
+    height: 4vh;
+  }
+
+  .mode-container i {
+    font-size: 1.5vw;
+  }
+
+  .fa-sun {
+    right: 70%;
+    top: 16%;
+  }
+
+  .fa-moon {
+    left: 70%;
+    top: 16%;
+  }
+
+  .button {
+    width: 4.7vw;
+  }
+
+  /* Mode */
+
+  .mode::-moz-range-thumb { /* Bolinha no Firefox */
+    border: none;
+    background: #ACACAC;
+    height: 3.75vh;
+    width: 3.75vh;
+    border-radius: 50%;
+    transition: 1s ease-in-out;
+  }
+
+  .mode::-webkit-slider-thumb { /* Bolinha no Chrome */
+    -webkit-appearance: none;
+    outline: none;
+  
+    border: none;
+    background: #ACACAC;
+    height: 3.75vh;
+    width: 3.75vh;
+    border-radius: 50%;
+    transition: 1s ease-in-out;
+  }
+}

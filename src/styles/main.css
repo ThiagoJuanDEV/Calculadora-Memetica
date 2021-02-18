@@ -148,10 +148,16 @@ h4 {
   z-index: 2;
 }
 
-.mode::-webkit-slider-thumb {
+.mode::-webkit-slider-thumb { /* Bolinha no Chrome */
   -webkit-appearance: none;
   outline: none;
+
   border: none;
+  background: #ACACAC;
+  height: 2.75vh;
+  width: 2.75vh;
+  border-radius: 50%;
+  transition: 1s ease-in-out;
 }
 
 .mode:focus {
@@ -159,7 +165,7 @@ h4 {
   border: none;
 }
 
-.mode::-moz-range-thumb {
+.mode::-moz-range-thumb { /* Bolinha no Firefox */
   border: none;
   background: #ACACAC;
   height: 2.75vh;
@@ -183,6 +189,14 @@ h4 {
 }
 
 .dark::-moz-range-thumb {
+  border: none;
+  background: #fff;
+  height: 2.75vh;
+  width: 2.75vh;
+  border-radius: 50%;
+}
+
+.dark::-webkit-slider-thumb {
   border: none;
   background: #fff;
   height: 2.75vh;
