@@ -1,4 +1,4 @@
-const Operators = ({ setOperator, inputNumber, setInputNumber }) => {
+const Operators = ({ setOperator, inputNumber, setInputNumber, light }) => {
   const operators = ["+", "-", "/", "*"];
 
   const operatorActive = (op) => {
@@ -10,7 +10,7 @@ const Operators = ({ setOperator, inputNumber, setInputNumber }) => {
     <div>
       {operators.map((operator, index) => {
         return (
-          <button key={index} onClick={() => operatorActive(operator)}>
+          <button key={index} onClick={() => operatorActive(operator)} className={`${light ? 'light-button' : 'dark-button'} m-55 button`}>
             {operator}
           </button>
         );
