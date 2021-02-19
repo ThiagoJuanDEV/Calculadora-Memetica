@@ -15,7 +15,7 @@
 <h2 id="tech">Tecnologias</h2>
 
 <ul>
-  <li>React</li>
+  <li>ReactJS</li>
   <li>HTMl & CSS</li>
 </ul>
 
