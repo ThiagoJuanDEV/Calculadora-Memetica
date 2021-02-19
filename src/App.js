@@ -1,6 +1,6 @@
 import Calculator from "./components/Calculator";
 import "./styles/main.css";
-import "./styles/mobile.css";
+import "./styles/media.css";
 import { useState } from "react";
 
 function App() {

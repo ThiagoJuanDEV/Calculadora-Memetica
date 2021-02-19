@@ -1,7 +1,10 @@
-const Numbers = ({ inputNumber, setInputNumber, setOperator, light }) => {
+const Numbers = ({ inputNumber, setInputNumber, setOperator, light, setLight }) => {
   const showSurprise = () => {
-    setInputNumber("0");
+    setInputNumber("Eu avisei!");
+    document.querySelector('#root').classList.add('crazy');
+    setLight(false);
   };
+  
   const getResult = () => {
     try {
       const result = eval(inputNumber).toString();
@@ -11,20 +14,11 @@ const Numbers = ({ inputNumber, setInputNumber, setOperator, light }) => {
       setInputNumber(result);
       setOperator(null);
     } catch (e) {
-      /* if(e.name === 'SyntaxError' && e.message.includes('"0"-prefixed')) {
-        let expression = inputNumber.split(' ');
-        let str = '';
-        expression.forEach((e) => {
-          let splitExp = e.split('')
-          if(splitExp.length > 1 && splitExp[0] === '0') {
-            expression.splice(splitExp.slice(1));
-            return str.concat(` ${e}`);
-          }
-          str.concat(` ${e}`);
-        });
-
-        console.log(str);
-      } */
+      if (e.name === "SyntaxError" && e.message.includes('"0"-prefixed')) {
+        setInputNumber("Error: Número iniciou com 0!");
+      } else {
+        setInputNumber("Error!");
+      }
     }
   };
 
@@ -43,7 +37,7 @@ const Numbers = ({ inputNumber, setInputNumber, setOperator, light }) => {
             key={index}
             onClick={() =>
               setInputNumber(
-                inputNumber === "0"
+                inputNumber === "0" || parseInt(inputNumber) === false
                   ? number.toString()
                   : inputNumber.concat(number.toString())
               )

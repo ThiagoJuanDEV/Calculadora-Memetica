@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Sansation';
-  src: url('./s.ttf');
+  src: url('./fonts/s.ttf');
 }
 
 body {
@@ -202,4 +202,10 @@ h4 {
   height: 2.75vh;
   width: 2.75vh;
   border-radius: 50%;
+}
+
+/* Crazy Mode */
+
+.crazy {
+  background: url('https://media.giphy.com/media/jpnUo1K9G5nzUuFUQT/giphy.gif') repeat !important;
 }

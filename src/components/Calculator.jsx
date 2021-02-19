@@ -16,12 +16,15 @@ const Calculator = ({
   
   const mode = () => {
     input.current.classList.toggle('dark');
+
     if(input.current.classList.contains('dark')) {
+
       setLight(false);
-      input.current.nextElementSibling.style.zIndex = '3';
       document.querySelector("#root").style.backgroundColor = '#383838';
+      
       return;
     }
+
     setLight(true);
     document.querySelector("#root").style.backgroundColor = '#E5E5E5';
   }
