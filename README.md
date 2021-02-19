@@ -25,7 +25,7 @@
   <li>HTMl & CSS</li>
 </ul>
 
-<h2 href="autor">Autor</h2>
+<h2 id="autor">Autor</h2>
 
 <p>Me chamo Thiago Juan, sou um jovem programador de 16 anos que está em constante aprendizado e adora criar projetos na programação. Caso queira ter um contato mais direto comigo, pode me chamar lá no meu instagram <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjr6pmxlvbuAhXLGLkGHXvBBoAQFjAAegQIAhAD&url=https%3A%2F%2Fwww.instagram.com%2Ftjuan.dev%2F&usg=AOvVaw0CsJ1XZXTubq1kjstgywkS">@tjuan.dev</a>, onde eu posto várias coisas sobre programação e troco ideia com a galera.
 </p>
